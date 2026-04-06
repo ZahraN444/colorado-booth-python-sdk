@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "colorado-booth-sdk"
 description = "test"
-version = "1.0.5"
+version = "1.0.6"
 readme = "README.md"
 keywords = []
 dependencies = ["apimatic-core~=0.2.0, >= 0.2.24", "apimatic-core-interfaces~=0.1.0, >= 0.1.8", "apimatic-requests-client-adapter~=0.1.0, >= 0.1.10", "python-dotenv>=0.21, <2.0", "deprecation~=2.1"]
