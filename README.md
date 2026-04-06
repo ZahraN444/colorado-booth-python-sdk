@@ -11,11 +11,11 @@ The package is compatible with Python versions `3.7+`.
 Install the package from PyPi using the following pip command:
 
 ```bash
-pip install colorado-booth-sdk==1.0.1
+pip install colorado-booth-sdk==1.0.5
 ```
 
 You can also view the package at:
-https://pypi.python.org/pypi/colorado-booth-sdk/1.0.1
+https://pypi.python.org/pypi/colorado-booth-sdk/1.0.5
 
 ## Test the SDK
 
@@ -30,7 +30,7 @@ pytest
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
@@ -39,7 +39,7 @@ The following parameters are configurable for the API Client:
 | access_token | `str` |  |
 | port | `str` | *Default*: `"80"` |
 | suites | `SuiteCodeEnum` | *Default*: `1` |
-| environment | [`Environment`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/README.md#environments) | The API environment. <br> **Default: `Environment.TESTING`** |
+| environment | [`Environment`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/README.md#environments) | The API environment. <br> **Default: `Environment.TESTING`** |
 | http_client_instance | `Union[Session, HttpClientProvider]` | The Http Client passed from the sdk user for making requests |
 | override_http_client_configuration | `bool` | The value which determines to override properties of the passed Http Client from the sdk user |
 | http_call_back | `HttpCallBack` | The callback value that is invoked before and after an HTTP call is made to an endpoint |
@@ -48,14 +48,14 @@ The following parameters are configurable for the API Client:
 | backoff_factor | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
 | retry_statuses | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | retry_methods | `Array of string` | The http methods on which retry is to be done. <br> **Default: ["GET", "PUT"]** |
-| proxy_settings | [`ProxySettings`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/proxy-settings.md) | Optional proxy configuration to route HTTP requests through a proxy server. |
-| basic_auth_credentials | [`BasicAuthCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/basic-authentication.md) | The credential object for Basic Authentication |
-| api_key_credentials | [`ApiKeyCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/custom-query-parameter.md) | The credential object for Custom Query Parameter |
-| api_header_credentials | [`ApiHeaderCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/custom-header-signature.md) | The credential object for Custom Header Signature |
-| o_auth_ccg_credentials | [`OAuthCCGCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/oauth-2-client-credentials-grant.md) | The credential object for OAuth 2 Client Credentials Grant |
-| o_auth_acg_credentials | [`OAuthACGCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/oauth-2-authorization-code-grant.md) | The credential object for OAuth 2 Authorization Code Grant |
-| o_auth_ropcg_credentials | [`OAuthROPCGCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/oauth-2-resource-owner-credentials-grant.md) | The credential object for OAuth 2 Resource Owner Credentials Grant |
-| o_auth_bearer_token_credentials | [`OAuthBearerTokenCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/oauth-2-bearer-token.md) | The credential object for OAuth 2 Bearer token |
+| proxy_settings | [`ProxySettings`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/proxy-settings.md) | Optional proxy configuration to route HTTP requests through a proxy server. |
+| basic_auth_credentials | [`BasicAuthCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/basic-authentication.md) | The credential object for Basic Authentication |
+| api_key_credentials | [`ApiKeyCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/custom-query-parameter.md) | The credential object for Custom Query Parameter |
+| api_header_credentials | [`ApiHeaderCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/custom-header-signature.md) | The credential object for Custom Header Signature |
+| o_auth_ccg_credentials | [`OAuthCCGCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/oauth-2-client-credentials-grant.md) | The credential object for OAuth 2 Client Credentials Grant |
+| o_auth_acg_credentials | [`OAuthACGCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/oauth-2-authorization-code-grant.md) | The credential object for OAuth 2 Authorization Code Grant |
+| o_auth_ropcg_credentials | [`OAuthROPCGCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/oauth-2-resource-owner-credentials-grant.md) | The credential object for OAuth 2 Resource Owner Credentials Grant |
+| o_auth_bearer_token_credentials | [`OAuthBearerTokenCredentials`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/oauth-2-bearer-token.md) | The credential object for OAuth 2 Bearer token |
 
 The API client can be initialized as follows:
 
@@ -124,7 +124,7 @@ from multiauthsample.multiauthsample_client import MultiauthsampleClient
 client = MultiauthsampleClient.from_environment(dotenv_path='/path/to/.env')
 ```
 
-See the [Environment-Based Client Initialization](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/environment-based-client-initialization.md) section for details.
+See the [Environment-Based Client Initialization](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/environment-based-client-initialization.md) section for details.
 
 ## Environments
 
@@ -141,35 +141,35 @@ The SDK can be configured to use a different environment for making API calls. A
 
 This API uses the following authentication schemes.
 
-* [`basicAuth (Basic Authentication)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/basic-authentication.md)
-* [`apiKey (Custom Query Parameter)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/custom-query-parameter.md)
-* [`apiHeader (Custom Header Signature)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/custom-header-signature.md)
-* [`OAuthCCG (OAuth 2 Client Credentials Grant)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/oauth-2-client-credentials-grant.md)
-* [`OAuthACG (OAuth 2 Authorization Code Grant)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/oauth-2-authorization-code-grant.md)
-* [`OAuthROPCG (OAuth 2 Resource Owner Credentials Grant)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/oauth-2-resource-owner-credentials-grant.md)
-* [`OAuthBearerToken (OAuth 2 Bearer token)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/auth/oauth-2-bearer-token.md)
+* [`basicAuth (Basic Authentication)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/basic-authentication.md)
+* [`apiKey (Custom Query Parameter)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/custom-query-parameter.md)
+* [`apiHeader (Custom Header Signature)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/custom-header-signature.md)
+* [`OAuthCCG (OAuth 2 Client Credentials Grant)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/oauth-2-client-credentials-grant.md)
+* [`OAuthACG (OAuth 2 Authorization Code Grant)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/oauth-2-authorization-code-grant.md)
+* [`OAuthROPCG (OAuth 2 Resource Owner Credentials Grant)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/oauth-2-resource-owner-credentials-grant.md)
+* [`OAuthBearerToken (OAuth 2 Bearer token)`](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/auth/oauth-2-bearer-token.md)
 * `CustomAuth (Custom Authentication)`
 
 ## List of APIs
 
-* [Authentication](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/controllers/authentication.md)
+* [Authentication](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/controllers/authentication.md)
 
 ## SDK Infrastructure
 
 ### Configuration
 
-* [ProxySettings](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/proxy-settings.md)
-* [Environment-Based Client Initialization](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/environment-based-client-initialization.md)
+* [ProxySettings](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/proxy-settings.md)
+* [Environment-Based Client Initialization](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/environment-based-client-initialization.md)
 
 ### HTTP
 
-* [HttpResponse](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/http-response.md)
-* [HttpRequest](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/http-request.md)
+* [HttpResponse](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/http-response.md)
+* [HttpRequest](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/http-request.md)
 
 ### Utilities
 
-* [ApiHelper](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/api-helper.md)
-* [HttpDateTime](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/http-date-time.md)
-* [RFC3339DateTime](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/rfc3339-date-time.md)
-* [UnixDateTime](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.1/doc/unix-date-time.md)
+* [ApiHelper](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/api-helper.md)
+* [HttpDateTime](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/http-date-time.md)
+* [RFC3339DateTime](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/rfc3339-date-time.md)
+* [UnixDateTime](https://www.github.com/ZahraN444/colorado-booth-python-sdk/tree/1.0.5/doc/unix-date-time.md)
 
